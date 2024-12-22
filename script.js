@@ -159,6 +159,7 @@ prevImage.onclick = () => {
   }
 
   productImage = document.getElementById("product-image");
+  alert(productImage);
   srcSplit = productImage.src.split(".");
   productImage.src = srcSplit[srcSplit.length - 2]
     .concat("-", `${productTag}`)
