@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Ecommerce Product Page</title>
+  </head>
+  <body>
+    <!-- CONTENT OF MENU -->
+    <aside id="sidebar">
+      <div>
+        <img
+          src="assets/images/icon-close.svg"
+          alt="close menu"
+          id="close-menu"
+        />
+        <p>Collections</p>
+        <p>Men</p>
+        <p>Women</p>
+        <p>About</p>
+        <p>Contact</p>
+      </div>
+    </aside>
+    <div class="body-wrap">
+      <header>
+        <nav>
+          <img
+            src="assets/images/icon-menu.svg"
+            alt="menu"
+            id="menu"
+            tabindex="0"
+            role="button"
+          />
+          <h1>sneakers</h1>
+          <!-- Menu selection on Desktop -->
+          <div id="menu-desktop">
+            <p>Collections</p>
+            <p>Men</p>
+            <p>Women</p>
+            <p>About</p>
+            <p>Contact</p>
+          </div>
+          <img
+            src="assets/images/icon-cart.svg"
+            alt="cart-icon"
+            id="cart-icon"
+            tabindex="0"
+            role="button"
+          />
+          <img src="assets/images/image-avatar.png" alt="profile-picture" />
+
+          <!-- CART CONTENT -->
+          <aside id="cart-content">
+            <h3>Cart</h3>
+            <section id="ordered-items">
+              <p id="empty-order">Your cart is empty</p>
+            </section>
+            <button type="button" id="checkout">Checkout</button>
+          </aside>
+        </nav>
+      </header>
+
+      <main>
+        <!-- Product Images -->
+        <div class="product-images">
+          <img
+            src="assets/images/image-product-1.jpg"
+            alt="Product"
+            id="product-image"
+            tabindex="0"
+            role="button"
+          />
+          <div class="next-and-prev-icons">
+            <img
+              src="assets/images/icon-previous.svg"
+              alt="show previous product"
+              class="prev-icon"
+              tabindex="0"
+              role="button"
+            />
+            <img
+              src="assets/images/icon-next.svg"
+              alt="show next product"
+              class="next-icon"
+              tabindex="0"
+              role="button"
+            />
+          </div>
+          <div class="thumbnails">
+            <img
+              src="assets/images/image-product-1-thumbnail.jpg"
+              alt="product-thumbnail-1"
+              id="thumbnail-selected"
+              class="thumbnail-desktop"
+              tabindex="0"
+              role="button"
+            />
+            <img
+              src="assets/images/image-product-2-thumbnail.jpg"
+              alt="product-thumbnail-2"
+              class="thumbnail-desktop"
+              tabindex="0"
+              role="button"
+            />
+            <img
+              src="assets/images/image-product-3-thumbnail.jpg"
+              alt="product-thumbnail-3"
+              class="thumbnail-desktop"
+              tabindex="0"
+              role="button"
+            />
+            <img
+              src="assets/images/image-product-4-thumbnail.jpg"
+              alt="product-thumbnail-4"
+              class="thumbnail-desktop"
+              tabindex="0"
+              role="button"
+            />
+          </div>
+        </div>
+
+        <!-- Description -->
+        <section class="product-description">
+          <p class="header-title--small">sneaker company</p>
+          <h2 class="header-title-bold">Fall Limited Edition Sneakers</h2>
+          <p class="description">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they'll withstand everything
+            the weather can offer.
+          </p>
+
+          <!-- Prices -->
+          <section class="prices">
+            <p class="price-big">$125.00</p>
+            <p class="price-discount">50%</p>
+            <p class="price-small"><strike>$250.00</strike></p>
+          </section>
+
+          <!-- Buttons -->
+          <section class="buttons">
+            <!-- Change product count -->
+            <button class="product-count" tabindex="-1">
+              <img
+                src="assets/images/icon-minus.svg"
+                alt="decrease product count"
+                id="product-count--minus"
+                tabindex="0"
+                role="button"
+              />
+              <p id="product-count--number">0</p>
+              <img
+                src="assets/images/icon-plus.svg"
+                alt="increase product count"
+                id="product-count--plus"
+                tabindex="0"
+                role="button"
+              />
+            </button>
+            <!-- Add product to Cart -->
+            <button class="add-to-cart">
+              <img
+                src="assets/images/icon-cart.svg"
+                alt="cart icon"
+                class="add-product-cart"
+              />
+              <p>Add to cart</p>
+            </button>
+          </section>
+        </section>
+      </main>
+
+      <!-- LIGHTBOX -->
+      <div class="product-images-desktop">
+        <div>
+          <img
+            src="assets/images/icon-close.svg"
+            alt="close lightbox"
+            id="close-lightbox"
+            tabindex="0"
+            role="button"
+          />
+          <img
+            src="assets/images/image-product-1.jpg"
+            alt="Product"
+            id="product-image-desktop"
+          />
+          <div class="next-and-prev-icons" tabindex="-1">
+            <img
+              src="assets/images/icon-previous.svg"
+              alt="show previous product"
+              class="prev-icon"
+              tabindex="0"
+              role="button"
+            />
+            <img
+              src="assets/images/icon-next.svg"
+              alt="show next product"
+              class="next-icon"
+              tabindex="0"
+              role="button"
+            />
+          </div>
+          <div class="thumbnails-lightbox">
+            <img
+              src="assets/images/image-product-1-thumbnail.jpg"
+              alt="product-thumbnail-1"
+              id="thumbnail-selected"
+              class="thumbnail-desktop-lightbox"
+              tabindex="0"
+              role="button"
+            />
+            <img
+              src="assets/images/image-product-2-thumbnail.jpg"
+              alt="product-thumbnail-2"
+              class="thumbnail-desktop-lightbox"
+              tabindex="0"
+              role="button"
+            />
+            <img
+              src="assets/images/image-product-3-thumbnail.jpg"
+              alt="product-thumbnail-3"
+              class="thumbnail-desktop-lightbox"
+              tabindex="0"
+              role="button"
+            />
+            <img
+              src="assets/images/image-product-4-thumbnail.jpg"
+              alt="product-thumbnail-4"
+              class="thumbnail-desktop-lightbox"
+              tabindex="0"
+              role="button"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
