@@ -161,7 +161,7 @@ prevImage.onclick = () => {
   productImage = document.getElementById("product-image");
   alert(productImage.src);
   srcSplit = productImage.src.split(".");
-  productImage.src = srcSplit[srcSplit.length - 2].slice(0,-2)
+  productImage.src = srcSplit[srcSplit.length - 2].slice(3,-2)
     .concat("-", `${productTag}`)
     .concat(".", "jpg");
   document.getElementById("product-image-desktop").src = productImage.src;
