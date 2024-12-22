@@ -73,7 +73,7 @@ addToCart.onclick = () => {
     productImage = document.getElementById("product-image");
     srcSplit = productImage.src.split(".");
     productThumbnailSrc = srcSplit[srcSplit.length - 2]
-      .slice(6)
+      .slice(3)
       .concat("-", "thumbnail")
       .concat(".", "jpg");
     productThumbnail = document.createElement("img");
@@ -345,9 +345,10 @@ mainProductImage = document.getElementById("product-image");
 lightbox = document.getElementsByClassName("product-images-desktop")[0];
 closeLightbox = document.getElementById("close-lightbox");
 // Lightbox Show
+if (window.innerWidth >= 1000){
 mainProductImage.onclick = () => {
   lightbox.style.display = "flex";
-};
+};}
 
 //Lightbox Hide
 closeLightbox.onclick = () => {
