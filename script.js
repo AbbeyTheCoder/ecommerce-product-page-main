@@ -73,7 +73,7 @@ addToCart.onclick = () => {
     productImage = document.getElementById("product-image");
     srcSplit = productImage.src.split(".");
     productThumbnailSrc = srcSplit[srcSplit.length - 2]
-      .slice(6)
+      .slice(3)
       .concat("-", "thumbnail")
       .concat(".", "jpg");
     productThumbnail = document.createElement("img");
@@ -161,6 +161,7 @@ prevImage.onclick = () => {
   productImage = document.getElementById("product-image");
   srcSplit = productImage.src.split(".");
   productImage.src = srcSplit[srcSplit.length - 2]
+    .slice(3, -2)
     .concat("-", `${productTag}`)
     .concat(".", "jpg");
   document.getElementById("product-image-desktop").src = productImage.src;
@@ -191,6 +192,7 @@ prevLightBoxImage.onclick = () => {
   productImage = document.getElementById("product-image");
   srcSplit = productImage.src.split(".");
   productImage.src = srcSplit[srcSplit.length - 2]
+    .slice(3, -2)
     .concat("-", `${productTag}`)
     .concat(".", "jpg");
   document.getElementById("product-image-desktop").src = productImage.src;
@@ -223,7 +225,7 @@ nextImage.onclick = () => {
   productImage = document.getElementById("product-image");
   srcSplit = productImage.src.split(".");
   productImage.src = srcSplit[srcSplit.length - 2]
-    .slice(6, -2)
+    .slice(3, -2)
     .concat("-", `${productTag}`)
     .concat(".", "jpg");
 
@@ -255,7 +257,7 @@ nextLightBoxImage.onclick = () => {
   productImage = document.getElementById("product-image");
   srcSplit = productImage.src.split(".");
   productImage.src = srcSplit[srcSplit.length - 2]
-    .slice(6, -2)
+    .slice(3, -2)
     .concat("-", `${productTag}`)
     .concat(".", "jpg");
   document.getElementById("product-image-desktop").src = productImage.src;
@@ -347,9 +349,11 @@ mainProductImage = document.getElementById("product-image");
 lightbox = document.getElementsByClassName("product-images-desktop")[0];
 closeLightbox = document.getElementById("close-lightbox");
 // Lightbox Show
-mainProductImage.onclick = () => {
-  lightbox.style.display = "flex";
-};
+if (window.innerWidth >= 1000) {
+  mainProductImage.onclick = () => {
+    lightbox.style.display = "flex";
+  };
+}
 
 //Lightbox Hide
 closeLightbox.onclick = () => {
