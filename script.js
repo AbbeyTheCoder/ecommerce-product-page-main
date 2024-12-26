@@ -223,6 +223,7 @@ nextImage.onclick = () => {
   productImage = document.getElementById("product-image");
   srcSplit = productImage.src.split(".");
   productImage.src = srcSplit[srcSplit.length - 2]
+    .slice(6, -2)
     .concat("-", `${productTag}`)
     .concat(".", "jpg");
 
@@ -254,6 +255,7 @@ nextLightBoxImage.onclick = () => {
   productImage = document.getElementById("product-image");
   srcSplit = productImage.src.split(".");
   productImage.src = srcSplit[srcSplit.length - 2]
+    .slice(6, -2)
     .concat("-", `${productTag}`)
     .concat(".", "jpg");
   document.getElementById("product-image-desktop").src = productImage.src;
